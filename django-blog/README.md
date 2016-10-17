@@ -2,7 +2,7 @@
 ####A basic blog web application based on Django framework.
 ####The sample website can be seen at [Blog](http://duboviy.pythonanywhere.com/)
 
-![djangoblog](/blog/static/image/homepage.jpg)
+![djangoblog](https://raw.githubusercontent.com/duboviy/web/master/django-blog/blog/static/image/homepage.jpg)
 
 ### Initial Setup ###
 1. Make a new virtualenv: ``virtualenv env``
@@ -23,9 +23,8 @@ Tested on Python 3.5.2 with Django 1.8
 1. Create superuser (for admin site usage): ``python manage.py createsuperuser``
 2. Open website in browser at ``http://localhost:8000/admin`` (enter your created before credentials) and add posts.
 
-### Clear DB mode ###
-If you want to run app with flashed db:
-1. Delete db.sqlite3
+### Clear/Flush DB ###
+1. Delete SQLite database: ``rm db.sqlite3``
 2. Launch the migration: ``python manage.py migrate``
 
 ### License ###
