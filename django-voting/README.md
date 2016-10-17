@@ -4,7 +4,7 @@ A basic voting web application written in Django framework.
 ### Initial Setup ###
 1. Make a new virtualenv: ``virtualenv env``
 2. Activate the virtualenv: ``source env/bin/activate``
-3. Install Django: ``pip install -r requirements.txt`` or just typing ``pip install Django``
+3. Install Django: ``pip install -r requirements.txt`` or just typing ``pip install Django==1.9.5``
 4. Edit ``mysite/settings.py:36`` to match your timezone
 5. Run the server: ``python manage.py runserver``
 6. Open website in browser at ``http://localhost:8000/voting`` or admin at ``http://localhost:8000/admin`` (admin:admin)
@@ -19,7 +19,7 @@ Run tests using the test command of your project’s manage.py utility:
 ``python manage.py test``
 
 ### Supported python versions ###
-Both python 2 and 3 version lines (2.6+ and 3.0+ versions with latest Django).
+3x versions with Django 1.9.5
 
 ### License ###
 **MIT** licensed library. See [LICENSE](LICENSE) for details.
