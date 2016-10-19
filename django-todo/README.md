@@ -1,13 +1,10 @@
-<h1><img src="https://raw.githubusercontent.com/duboviy/web/master/logo.png" height=85 alt="logo" title="logo"> django-blog</h1>
-####A basic blog web application based on Django framework.
-####The sample website can be seen at [Blog](http://duboviy.pythonanywhere.com/)
-
-![djangoblog](https://raw.githubusercontent.com/duboviy/web/master/django-blog/blog/static/image/homepage.jpg)
+<h1><img src="https://raw.githubusercontent.com/duboviy/web/master/logo.png" height=85 alt="logo" title="logo"> django-todo</h1>
+Very simple TODO list web app.
 
 ### Initial Setup ###
 1. Make a new virtualenv: ``virtualenv env``
 2. Activate the virtualenv: ``source env/bin/activate``
-3. Install Django: ``pip install -r requirements.txt`` or just typing ``pip install Django==1.8``
+3. Install Django: ``pip install -r requirements.txt``
 4. Run the server: ``python manage.py runserver``
 5. Open website in browser at ``http://localhost:8000``
 
@@ -17,21 +14,36 @@
 3. Open website in browser at ``http://localhost:8000``
 
 ### Supported python versions ###
-Tested on Python 3.5.2 with Django 1.8
+Tested on Python 2x and 3x version lines with Django 1.9.6
+
+### Technologies Stack ###
+* Python
+* Django
+* SQLite
+* HTML
+* CSS
+
+### Home Page ###
+* Displays TODO list
+![homepage](collection/static/images/todolist.png)
+
+### Admin page ###
+* Logged in user can add new tasks to the TODO list
+![adminpage](collection/static/images/adminpage.png)
 
 ### Admin mode ###
 1. Create superuser (for admin site usage): ``python manage.py createsuperuser``
-2. Open website in browser at ``http://localhost:8000/admin`` (enter your created before credentials) and add posts.
+2. Open website in browser at ``http://localhost:8000/admin`` (enter your created before credentials) and add todos.
 
 ### Clear/Flush DB ###
 1. Delete SQLite database: ``rm db.sqlite3``
 2. Launch the migration: ``python manage.py migrate``
 
 ### License ###
-**MIT** licensed library. See [LICENSE](LICENSE) for details.
+**MIT** licensed library. See [LICENSE.txt](LICENSE.txt) for details.
 
 ### Contributing ###
-If you have suggestions for improving the django-blog, please [open an issue or
+If you have suggestions for improving the django-todo, please [open an issue or
 pull request on GitHub](https://github.com/duboviy/web/).
 
 ### Badges ###

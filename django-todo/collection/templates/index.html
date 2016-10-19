@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+<title>My TODO List</title>
+</head>
+
+<body>
+
+<h1>TODO List!</h1>
+
+<p>Get your tasks organized.</p>
+
+<h2>TODO</h2>
+ 
+{% for x in items %}
+<p>{{ x.name }} - {{ x.created|date:"D d M Y" }}</p>
+ 
+<p>{{ x.description }}</p>
+<hr />
+{% endfor %}
+
+</body> 
+
+</html>
