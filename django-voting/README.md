@@ -15,7 +15,7 @@ A basic voting web application written in Django framework.
 
 ### How to run tests ###
 Run tests using the test command of your project’s manage.py utility:
-``python manage.py test``
+``python manage.py test polls``
 
 ### Supported python versions ###
 Tested on Python 3.5.2 with Django 1.9.5
