@@ -2,20 +2,20 @@
 Very simple webserver with basic REST API interface, admin panel and few tables:
 
 Employees:
-id
-first name,
-last name,
-department_id
+- id
+- first name,
+- last name,
+- department_id
 
 Departments:
-id,
-name
+- id,
+- name
 
 Admin panel allows to add/update/delete and search these tables.
 
 An API interface on top of Django, where the results are in JSON format:
-a) get_users - returns a list of the users, with their department name
-b) get_user - receives as key the user's ID, and returns the user with it's department name.
+- get_users - returns a list of the users, with their department name
+- get_user - receives as key the user's ID, and returns the user with it's department name.
 
 --
 Example:
