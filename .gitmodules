@@ -1,3 +1,6 @@
 [submodule "react_jekyll_homepage"]
-	path = react_jekyll_homepage
+	path = react-jekyll-homepage
 	url = https://github.com/duboviy/duboviy.github.io.git
+[submodule "nodejs-akinator"]
+	path = nodejs-akinator
+	url = https://github.com/duboviy/gamedev.git
