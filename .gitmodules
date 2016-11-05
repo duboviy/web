@@ -1,0 +1,3 @@
+[submodule "react_jekyll_homepage"]
+	path = react_jekyll_homepage
+	url = https://github.com/duboviy/duboviy.github.io.git
