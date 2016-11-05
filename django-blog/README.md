@@ -24,7 +24,7 @@ Tested on Python 3.5.2 with Django 1.8
 2. Open website in browser at ``http://localhost:8000/admin`` (enter your created before credentials) and add posts.
 
 ### Clear/Flush DB ###
-1. Delete SQLite database: ``rm db.sqlite3``
+1. Delete SQLite database: ``rm -f db.sqlite3``
 2. Launch the migration: ``python manage.py migrate``
 
 ### License ###

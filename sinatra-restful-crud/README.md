@@ -1,0 +1,88 @@
+<h1><img src="https://raw.githubusercontent.com/duboviy/web/sinatra-restful-crud/master/logo.png" height=85 alt="logo" title="logo"> Sinatra RESTful CRUD BlogPost service</h1>
+Simple web service with basic RESTful CRUD interface (based on Ruby framework - Sinatra) and very simple JavaScript client (based on Backbone.js):
+
+### Initial Setup ###
+Install the gem dependencies specified in our Gemfile:
+``bundle install`` 
+
+### Basic usage examples ###
+1. Run the Sinatra server:
+``ruby app.rb``
+2. Open website in browser at:
+``http://127.0.0.1:4567/blogposts``
+3. Open page:
+``../client/index.html``
+in any modern browser and look at console log
+
+### Clear/Flush DB ###
+The database is just ready to be used from scratch (file hw.db is already in repo).
+To create new database, simply run the following two commands:
+
+1. Delete SQLite database: ``rm -f hw.db``
+2. Launch the migration: ``rake db:migrate``
+
+### How to play with the CRUD interface ###
+
+You now have a full RESTful CRUD interface to a simple SQLite database backend.
+You can play with the interface very easily using simple curl commands:
+
+```
+$curl localhost:4567/blogposts
+[]
+
+$ curl -X POST --data "blogpost[name]=Success" \
+localhost:4567/blogposts
+true
+
+$ curl -X GET localhost:4567/blogposts
+[{"id":1,
+"name":"Success",
+"created_at":"2014-04-27T04:51:44.040Z",
+"updated_at":"2014-04-27T04:51:44.040Z"}]
+
+$ curl -X PUT --data "blogpost[name]=Yay" \
+localhost:4567/blogposts/1
+true
+
+$ curl -X GET localhost:4567/blogposts/1
+{"id":1,
+"name":"Yay",
+"created_at":"2014-04-27T04:51:44.040Z",
+"updated_at":"2014-04-27T04:58:52.225Z"}
+
+$ curl -X DELETE localhost:4567/blogposts
+[{"id":1,
+"name":"Yay",
+"created_at":"2014-04-27T04:51:44.040Z",
+"updated_at":"2014-04-27T04:58:52.225Z"}]
+
+$ curl -X GET localhost:4567/blogposts
+[]
+```
+
+### Supported Ruby and Gems versions ###
+Tested on Ruby 2.1.0, 2.2.0 and 2.3.1 with Sinatra 1.4.7, activerecord 5.0 and sqlite3 1.3.12
+
+### Technologies Stack to build RESTful CRUD ###
+* Ruby
+* Sinatra
+* ActiveRecord (ORM)
+* JavaScript
+* SQLite
+
+### License ###
+**MIT** licensed library. See [LICENSE.txt](LICENSE.txt) for details.
+
+### Contributing ###
+If you have suggestions for improving the django-todo, please [open an issue or
+pull request on GitHub](https://github.com/duboviy/web/).
+
+### Badges ###
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://github.com/duboviy/web/)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/built-by-hipsters.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](https://github.com/duboviy/web/)
+
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/powered-by-oxygen.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/powered-by-water.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://github.com/duboviy/web/)
+
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
+[![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](https://github.com/duboviy/web/)

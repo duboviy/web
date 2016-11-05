@@ -36,7 +36,7 @@ Tested on Python 2x and 3x version lines with Django 1.9.6
 2. Open website in browser at ``http://localhost:8000/admin`` (enter your created before credentials) and add todos.
 
 ### Clear/Flush DB ###
-1. Delete SQLite database: ``rm db.sqlite3``
+1. Delete SQLite database: ``rm -f db.sqlite3``
 2. Launch the migration: ``python manage.py migrate``
 
 ### License ###
