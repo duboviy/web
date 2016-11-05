@@ -1,5 +1,9 @@
-<h1><img src="https://raw.githubusercontent.com/duboviy/web/sinatra-restful-crud/master/logo.png" height=85 alt="logo" title="logo"> Sinatra RESTful CRUD BlogPost service</h1>
-Simple web service with basic RESTful CRUD interface (based on Ruby framework - Sinatra) and very simple JavaScript client (based on Backbone.js):
+<h1><img src="https://raw.githubusercontent.com/duboviy/web/master/sinatra-restful-crud/logo.png" height=85 alt="logo" title="logo"> Sinatra/ActiveRecord/Sqlite3 service</h1>
+Simple web service with basic RESTful CRUD interface (based on Ruby framework - Sinatra) and very simple JavaScript client (based on Backbone.js)
+
+"<a href="http://www.sinatrarb.com/intro.html">Sinatra</a> is a DSL for quickly creating web applications in Ruby with minimal effort"
+
+"<a href="http://guides.rubyonrails.org/active_record_basics.html">Active Record</a> is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database."
 
 ### Initial Setup ###
 Install the gem dependencies specified in our Gemfile:
