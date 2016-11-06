@@ -5,6 +5,7 @@ Service includes following interfaces:
 * RESTful CRUD API;
 * Web Pages
 
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/dashboard_page.png">
 
 ### Initial Setup ###
 1. Make a new virtualenv: ``virtualenv env``
@@ -37,6 +38,15 @@ Delete:
 ```bash
 curl -i --user test:test --dump-header - -H "Content-Type: application/json" -X DELETE http://127.0.0.1:8000/api/v1/task/5/
 ```
+
+### Web Pages ###
+Open website in browser at ``http://localhost:8000/`` and you'll see following pages flow:
+
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/login_screen.png">
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/right_side_tile_bar_menu.png">
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/new_task_page.png">
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/dashboard_page.png">
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/edit_task_page.png">
 
 ### Clear/Flush DB ###
 1. Delete SQLite database: ``rm development.sqlite3``
