@@ -10,17 +10,17 @@ Install the gem dependencies specified in our Gemfile:
 ``bundle install`` 
 
 ### Basic usage examples ###
-1. Run the Sinatra server:
+1) Run the Sinatra server:
 ```bash
 ruby app.rb
 ```
 
-2. Open website in browser at:
+2) Open website in browser at:
 ```bash
 http://127.0.0.1:4567/blogposts
 ```
 
-3. Open page:
+3) Open page:
 ```bash
 ../client/index.html
 ```
@@ -30,11 +30,11 @@ in any modern browser and look at console log
 The database is just ready to be used from scratch (file hw.db is already in repo).
 To create new database, simply run the following two commands:
 
-1. Delete SQLite database: 
+1) Delete SQLite database: 
 ```bash
 rm -f hw.db
 ```
-2. Launch the migration:
+2) Launch the migration:
 ```bash
 rake db:migrate
 ```
