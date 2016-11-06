@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ username }}{% endblock %}
+
+{% block head %}Todo List for {{ username }}{% endblock %}
+{%  block external %}
+    <script type="text/javascript" src="/tasks/static/js/first.js"></script>
+{% endblock %}
+
+{% block content %}
+{#    {% if user.is_authenticated %}#}
+{#        {% if tasklist %}#}
+{#            <ul>#}
+{#                {% for task in tasklist %}#}
+{#                    <li>{{ task.title }}</li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+{#        {% else %}#}
+{#            <p>No tasks found.</p>#}
+{#        {% endif %}#}
+{#    {% else %}#}
+{#        user is NOT logged in#}
+{#    {% endif %}#}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}User Login{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form class="form-horizontal" method="post" action="">{% csrf_token %}
+            <div class="form-group">
+                <label for="id_username" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-2">
+                    <input type="text" name="username" class="form-control" id="id_username" placeholder="Username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_password" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-2">
+                    <input type="password" name="password" class="form-control" id="id_password" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-2">
+                    <input type="submit" class="btn btn-default" id="id_password" value="Sign in" />
+                    <input type="hidden" name="next" value="/" />
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

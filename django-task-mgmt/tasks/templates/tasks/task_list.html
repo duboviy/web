@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{#{% block head %}Todo List for {{ user.username }}{% endblock %}#}
+
+{% block content %}
+    <ul>
+     {% if tasks %}
+        {% for task in tasks %}
+            <li>
+                <a href="{% url "task_edit" task.id %}">{{ task.title }}</a> |
+                <a href="{% url "task_delete" task.id %}">delete</a>
+            </li>
+        {% endfor %}
+    {% else %}
+         <p>No tasks found.</p>
+    {% endif %}
+    </ul>
+    <a href="{% url "task_new" %}">New</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Bookmarks - User: {{ username }}</title>
+</head>
+<body>
+<h1>Bookmarks for {{ username }}</h1>
+{% if tasklist %}
+    <ul>
+        {% for task in tasklist %}
+            <li>{{ task.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks found.</p>
+{% endif %}
+</body>
+</html>
