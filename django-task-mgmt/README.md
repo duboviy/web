@@ -44,6 +44,7 @@ Open website in browser at ``http://localhost:8000/`` and you'll see following p
 
 <img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/login_screen.png">
 <img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/right_side_tile_bar_menu.png">
+<img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/register_page.png">
 <img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/new_task_page.png">
 <img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/dashboard_page.png">
 <img src="https://raw.githubusercontent.com/duboviy/web/master/django-task-mgmt/screenshots/edit_task_page.png">
