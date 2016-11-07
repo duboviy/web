@@ -1,0 +1,82 @@
+{% extends "template.html" %}
+{% set active_page = "books" %}
+{% block content %}
+    <div class="row" style="margin-right: 0">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="panel panel-default paddined" >
+                <div class="row">
+                    <table class="table" id="book-list">
+                        <tr>
+                            <td><b>Book</b></td>
+                            <td><b>Authors</b></td>
+                            {% if username %}
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button></td>
+                            {% endif %}
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% if username %}
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add</h4>
+            </div>
+            <form action="/add-book" method="post">
+                {{add_form.hidden_tag()}}
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p><b>Name:</b></p>
+                        {{ add_form.name(class_="form-control") }}
+                        <br/>
+                        <p><b>Authors:</b></p>
+                        {{ add_form.authors(class_="form-control") }}
+                        <p class="disabled"><small>enter authors separated by commas</small></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel1">Edit</h4>
+            </div>
+            <form class="changeable" method="post">
+                {{edit_form.hidden_tag()}}
+                <div class="modal-body">
+                    <div class="form-group edit-form">
+                        <p><b>Name:</b></p>
+                        {{ edit_form.name(class_="form-control") }}
+                        <br/>
+                        <p><b>Authors:</b></p>
+                        {{ edit_form.authors(class_="form-control") }}
+                        <p><small>enter authors separated by commas</small></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+<script src="{{ url_for('static', filename='js/searchBooks.js') }}"></script>
+{% endblock %}

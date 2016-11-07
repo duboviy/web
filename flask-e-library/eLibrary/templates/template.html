@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</head>
+<body>
+
+    {% set navigation_bar = [
+    ('/', 'books', 'Books'),
+    ('/authors', 'authors', 'Authors'),
+    ] -%}
+    {% set active_page = active_page|default('books') -%}
+
+
+    <header>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-inner">
+                    <a class="navbar-brand" href="">eLibrary</a>
+
+                    <ul class="nav navbar-nav">
+                        {% for href, id, caption in navigation_bar %}
+                        <li {% if id == active_page %} class="active"{% endif
+                        %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                        {% endfor %}
+                    </ul>
+
+                    {% if username %}
+                    <div class="navbar-right">
+                        <ul class="nav navbar-right navbar-nav" style="margin-right: 0">
+                            <li>
+                                <a href="">{{username}}&nbsp;</a>
+                            </li>
+                            <li>
+                                <a href="/logout">Log out</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    {% else %}
+                    <form action="" method="post" class="navbar-form navbar-right" style="margin-right: 0">
+                        {{form.hidden_tag()}}
+                        <div class="form-group {% if error %} has-error {% endif %}">
+                            {{ form.login(class_="form-control") }}&nbsp;{{ form.password(class_="form-control") }}
+                        </div>
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% with errors = get_flashed_messages(category_filter=["error"]) %}
+    {% if errors %}
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-5 ">
+            <div class="container has-error">
+                {%- for msg in errors %}
+                <label class="control-label">{{ msg }}</label>
+                {% endfor -%}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="row" style="margin-right: 0">
+        <div class="col-lg-1 col-lg-offset-4">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="switchSearch">Books <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Books</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3">
+            <form action="" method="get">
+                <input type="text" class="form-control" id="search-input" placeholder="Search"/>
+            </form>
+        </div>
+
+        <div class="col-lg-1">
+            <button type="submit" class="btn btn-primary" id="search-button"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+    </div>
+
+    <br/>
+
+    {% block content %}
+    {% endblock %}
+
+
+    <script src="{{ url_for('static', filename='js/editFunctions.js') }}"></script>
+</body>
+</html>
