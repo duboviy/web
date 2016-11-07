@@ -29,18 +29,22 @@ python runserver.py
 
 ### Features ###
 
-1. Editing (available for an authorized user):
+1) Editing (available for an authorized user):
+
 * Book list management: add / remove / edit the book.
+
 * Managing the list of authors: add / remove / edit the author.
+
 * Connection between books and authors - many to many.
 
-2. Book Search by title or author (available for all users (not only authorized)).
 
-3. Authentication and Authorization.
+2) Book Search by title or author (available for all users (not only authorized)).
 
-4. The user data validated before being stored in the database.
+3) Authentication and Authorization.
 
-5. The project contain SQL-scripts for database deployment and filling it with test data.
+4) The user data validated before being stored in the database.
+
+5) The project contain SQL-scripts for database deployment and filling it with test data.
 
 
 ### Supported Python versions ###
