@@ -1,4 +1,7 @@
 <h1><img src="https://raw.githubusercontent.com/duboviy/web/master/logo.png" height=85 alt="logo" title="logo"> web</h1>
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cae977275df74e0bbcf365f165e66f81)](https://www.codacy.com/app/dubovoy/web?utm_source=github.com&utm_medium=referral&utm_content=duboviy/web&utm_campaign=badger)
+
 A sandbox for trying out web frameworks:
 
 * Django
@@ -16,7 +19,6 @@ If you have suggestions for improving the django-blog, please [open an issue or
 pull request on GitHub](https://github.com/duboviy/web/).
 
 ### Badges ###
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cae977275df74e0bbcf365f165e66f81)](https://www.codacy.com/app/dubovoy/web?utm_source=github.com&utm_medium=referral&utm_content=duboviy/web&utm_campaign=badger)
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://github.com/duboviy/web/)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/built-by-hipsters.svg)](https://github.com/duboviy/web/) [![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](https://github.com/duboviy/web/)
 
