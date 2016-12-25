@@ -1,4 +1,7 @@
 <h1><img src="https://raw.githubusercontent.com/duboviy/web/master/logo.png" height=85 alt="logo" title="logo"> web</h1>
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cae977275df74e0bbcf365f165e66f81)](https://www.codacy.com/app/dubovoy/web?utm_source=github.com&utm_medium=referral&utm_content=duboviy/web&utm_campaign=badger)
+
 A sandbox for trying out web frameworks:
 
 * Django
